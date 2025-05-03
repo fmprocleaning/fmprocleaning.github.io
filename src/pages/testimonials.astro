@@ -1,0 +1,96 @@
+---
+import MainLayout from '../layouts/main-layout.astro'
+import QuoteText from '../components/quote.tsx'
+
+// Fix for path issues - ensure baseUrl works with both dev server and production
+const baseUrl = import.meta.env.BASE_URL || '/'
+
+const testimonials = [
+	{
+    img: `/interland_inverted.png`,
+		company: 'Interland',
+		website: 'https://www.interland.co.uk',
+		review: "FCM has transformed our office environment. Their attention to detail and reliability is unmatched in the industry. Our employees have noticed the difference, and clients always comment on how clean and professional our space looks."
+	},
+	{
+    img: `/ylvsc.png`,
+		company: 'Young Lives Vs Cancer',
+		website: 'https://www.younglivesvscancer.org.uk',
+		review: "We've worked with FCM for three years and their commitment to quality cleaning services has been consistently excellent. They understand the unique requirements of our facilities and deliver outstanding results every time."
+	},
+	{
+    img: `/perfectlynestedholidayfuture.png`,
+		company: 'Perfectly Nested Holiday Future',
+		website: 'https://www.perfectlynestedholidayfuture.com',
+		review: "Our holiday properties have never looked better. FCM's cleaning staff are thorough, professional, and always reliable. Our guests regularly comment on the cleanliness of our properties, which has helped us maintain high ratings on booking platforms."
+	},
+	{
+    img: `/woodfell_inverted.png`,
+		company: 'WoodFell',
+		website: 'https://www.woodfell.co.uk',
+		review: "FCM provides exceptional cleaning services for our offices. Their team is professional, detail-oriented, and always goes the extra mile. We appreciate their flexibility in accommodating our schedule changes and special cleaning requests."
+	},
+]
+
+---
+
+<MainLayout title = 'FCM Client Testimonials'>
+
+  <!-- Banner Section -->
+
+  <section class="w-full bg-about h-[50vh] flex justify-center items-end">
+    <div class="py-[30px] lg:py-[41px] px-[60px] lg:px-[152px] flex flex-col justify-center items-center bg-white rounded-tl-[37px] rounded-tr-[37px] gap-2.5">
+      <h1 class="text-[30px] leading-[40px] lg:text-[50px] lg:leading-[62px] font-dm capitalize text-primary-200 ">Client Testimonials</h1>
+      <p class="text-base lg:text-[22px] lg:leading-[33px] tracking-tight font-jost text-text-gray"> <a href="/">Home</a> / Testimonials </p>
+    </div>
+  </section>
+
+  <!-- Quote Section -->
+  <section class="w-full px-12 lg:px-0 pt-[100px] lg:pt-[150px] lg:max-w-[1200px] mx-auto flex items-center justify-center">
+    <QuoteText text="We pride ourselves on delivering exceptional cleaning services that exceed our clients' expectations. Their testimonials reflect our commitment to excellence." name="FCM TEAM"/>
+  </section>
+
+  <!-- Testimonials Grid Section -->
+  <section class="w-full lg:max-w-[1200px] mx-auto px-12 xl:px-0 pt-[100px] lg:pt-[150px] pb-[50px]">
+    <h2 class="text-[30px] text-center font-dm tracking-wide capitalize leading-8 md:leading-[62.50px] md:text-[50px] text-text-blue pb-16">What Our Clients Say</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+      {
+        testimonials.map((testimonial) => (
+          <div class="bg-primary-300 p-8 rounded-[30px] flex flex-col gap-6">
+            <div class="flex items-center gap-4">
+              <img src={testimonial.img} alt={`${testimonial.company} logo`} class="w-16 h-16 object-contain" />
+              <div>
+                <a href={testimonial.website} target="_blank" rel="noopener noreferrer" class="text-primary-200 text-lg font-dm hover:underline">{testimonial.company}</a>
+              </div>
+            </div>
+            <p class="text-text-gray font-jost">{testimonial.review}</p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="w-full lg:max-w-[1200px] mx-auto px-12 xl:px-0 pt-[50px] lg:pt-[100px] pb-[100px]">
+    <div class="w-full bg-primary-200 text-white rounded-[30px] py-16 px-8 lg:px-16 text-center">
+      <h2 class="text-[30px] font-dm tracking-wide capitalize leading-8 md:leading-[50px] md:text-[40px] text-white pb-6">Ready to experience the FCM difference?</h2>
+      <p class="text-base md:text-[22px] tracking-tight font-jost text-white leading-[33px] lg:max-w-[70%] mx-auto pb-10">Join our satisfied clients and discover why businesses trust us with their cleaning and maintenance needs.</p>
+      <a href="/contact" class="inline-block rounded-[18px] bg-primary-100 text-white text-base lg:text-lg font-semibold font-['Jost'] leading-snug tracking-tight px-10 py-5 md:px-[54px] md:py-[26px]">Contact Us Today</a>
+    </div>
+  </section>
+
+</MainLayout>
+
+<style>
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+      display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+  }
+</style>

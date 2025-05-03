@@ -1,0 +1,177 @@
+---
+import MainLayout from '../layouts/main-layout.astro'
+import QuoteText from '../components/quote.tsx'
+import Facebook  from '../icons/facebook.tsx';
+import Twitter  from '../icons/twitter.tsx';
+import LinkedIn  from '../icons/linkedin.tsx';
+import Instagram  from '../icons/instagram.tsx';
+
+const baseUrl = import.meta.env.BASE_URL || '/'
+---
+
+
+<MainLayout title = 'About FCM Cleaning & Maintenance'>
+
+  <!-- Banner Section -->
+
+  <section class="w-full bg-about h-[50vh] flex justify-center items-end">
+    <div class="py-[30px] lg:py-[41px] px-[60px] lg:px-[152px] flex flex-col justify-center items-center bg-white rounded-tl-[37px] rounded-tr-[37px] gap-2.5">
+      <h1 class="text-[30px] leading-[40px] lg:text-[50px] lg:leading-[62px] font-dm capitalize text-primary-200 ">About Us</h1>
+      <p class="text-base lg:text-[22px] lg:leading-[33px] tracking-tight font-jost text-text-gray"> <a href="/">Home</a> / About Us </p>
+    </div>
+  </section>
+
+  <!-- Quote Section -->
+
+  <section class="w-full px-12 lg:px-0 pt-[100px] lg:pt-[200px] lg:max-w-[1200px] mx-auto flex items-center justify-center">
+    <QuoteText text="Cleanliness is not just about appearance—it's about creating healthy, welcoming environments where people can thrive." name="FCM TEAM"/>
+  </section>
+
+  <!-- Our Story Section -->
+
+  <section class="w-full pt-[100px] lg:pt-[150px] px-12 lg:px-0 mx-auto lg:max-w-[1200px] ">
+    <div class="w-full flex flex-col-reverse lg:flex-row justify-between gap-10 items-center">
+      <div class="flex flex-col gap-6">
+        <h2 class="text-[30px] text-center lg:text-left font-dm tracking-wide capitalize leading-8 md:leading-[62.50px] md:text-[50px] text-text-blue ">Our Commitment to Excellence</h2>
+        <p class="text-base md:text-[22px] lg:max-w-[85%] text-center lg:text-left tracking-tight font-jost text-text-gray leading-[33px]">Facility Cleaning and Maintenance Ltd (FCM) was founded with a simple mission: to provide professional, reliable cleaning services that help businesses create clean, safe, and welcoming environments. With over 10 years of industry experience, our team of dedicated cleaning professionals delivers consistent, high-quality results for businesses of all sizes.</p>
+        <p class="text-base md:text-[22px] lg:max-w-[85%] text-center lg:text-left tracking-tight font-jost text-text-gray leading-[33px]">We understand that a clean environment reflects your business standards. That's why we approach every project with meticulous attention to detail and a commitment to exceeding expectations.</p>
+      </div>
+      <img src="/about1.png" alt="FCM cleaning team at work">
+    </div>
+  </section>
+
+  <!-- Our Approach Section -->
+
+   <section class="w-full pt-[100px] lg:pt-[150px] px-12 lg:px-0 mx-auto lg:max-w-[1200px] ">
+    <div class="w-full flex flex-col-reverse lg:flex-row-reverse justify-between gap-24 items-center">
+      <div class="flex flex-col gap-6">
+        <h2 class="text-[30px] text-center lg:text-left font-dm tracking-wide capitalize leading-8 md:leading-[62.50px] md:text-[50px] text-text-blue ">Our Approach</h2>
+        <p class="text-base md:text-[22px] lg:max-w-[95%] text-center lg:text-left tracking-tight font-jost text-text-gray leading-[33px]">At FCM, we believe in a systematic, thorough approach to cleaning and maintenance. We begin with a comprehensive assessment of your facility's needs, develop a customized cleaning plan, and implement rigorous quality control measures to ensure consistent results.</p>
+        <p class="text-base md:text-[22px] lg:max-w-[95%] text-center lg:text-left tracking-tight font-jost text-text-gray leading-[33px]">We invest in our team through ongoing training and provide them with professional-grade equipment and environmentally-friendly cleaning products. This combination allows us to deliver superior cleaning services that meet the highest industry standards.</p>
+      </div>
+      <img src="/about2.png" alt="FCM cleaning equipment and supplies">
+    </div>
+  </section>
+  
+  <!-- Why Choose Us Section -->
+  
+  <section class="w-full pt-[100px] lg:pt-[150px] px-12 lg:px-0 mx-auto lg:max-w-[1200px]">
+    <h2 class="text-[30px] text-center font-dm tracking-wide capitalize leading-8 md:leading-[62.50px] md:text-[50px] text-text-blue pb-10">Why Choose FCM</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-8">
+      <div class="flex flex-col items-center text-center p-8 rounded-[30px] hover:bg-primary-300">
+        <h3 class="text-text-blue font-dm text-[22px] md:text-[25px] leading-loose mb-4">Experienced Team</h3>
+        <p class="text-base md:text-lg tracking-tight font-jost text-text-gray">Our professional cleaning staff brings years of industry experience and specialized training to every project.</p>
+      </div>
+      
+      <div class="flex flex-col items-center text-center p-8 rounded-[30px] hover:bg-primary-300">
+        <h3 class="text-text-blue font-dm text-[22px] md:text-[25px] leading-loose mb-4">Customized Solutions</h3>
+        <p class="text-base md:text-lg tracking-tight font-jost text-text-gray">We develop tailored cleaning plans that address your specific needs, schedule requirements, and budget constraints.</p>
+      </div>
+      
+      <div class="flex flex-col items-center text-center p-8 rounded-[30px] hover:bg-primary-300">
+        <h3 class="text-text-blue font-dm text-[22px] md:text-[25px] leading-loose mb-4">Quality Assurance</h3>
+        <p class="text-base md:text-lg tracking-tight font-jost text-text-gray">Our comprehensive quality control process ensures consistent, exceptional results with every cleaning service.</p>
+      </div>
+      
+      <div class="flex flex-col items-center text-center p-8 rounded-[30px] hover:bg-primary-300">
+        <h3 class="text-text-blue font-dm text-[22px] md:text-[25px] leading-loose mb-4">Eco-Friendly Products</h3>
+        <p class="text-base md:text-lg tracking-tight font-jost text-text-gray">We use environmentally responsible cleaning products that are effective yet safe for people, pets, and the planet.</p>
+      </div>
+      
+      <div class="flex flex-col items-center text-center p-8 rounded-[30px] hover:bg-primary-300">
+        <h3 class="text-text-blue font-dm text-[22px] md:text-[25px] leading-loose mb-4">Reliable Service</h3>
+        <p class="text-base md:text-lg tracking-tight font-jost text-text-gray">Count on us to show up on time, every time, with the right equipment and expertise to get the job done right.</p>
+      </div>
+      
+      <div class="flex flex-col items-center text-center p-8 rounded-[30px] hover:bg-primary-300">
+        <h3 class="text-text-blue font-dm text-[22px] md:text-[25px] leading-loose mb-4">Client Satisfaction</h3>
+        <p class="text-base md:text-lg tracking-tight font-jost text-text-gray">Our dedication to customer service and attention to detail has earned us a 98% client satisfaction rate.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Team Section -->
+
+  <section class="w-full py-[100px] lg:py-[185px] mt-[173px] px-12 lg:px-0 mx-auto bg-primary-300 ">
+    <div class="w-full flex flex-col gap-10 lg:max-w-[1200px] mx-auto" >
+		  <h2 class="font-dm tracking-wide text-center leading-[37px] lg:leading-[62.50px] text-[30px] lg:text-[50px] w-full lg:max-w-[70%] pb-9 mx-auto">Meet Our Leadership Team</h2>
+      <div class="flex w-full gap-8 flex-col md:flex-row justify-center items-center">
+        <div class="flex flex-col gap-10 w-full max-w-[350px] justify-between py-[70px] px-7 bg-white items-center rounded-[32px]">
+          <p class="flex flex-col tracking-tight leading-9 text-center">
+            <span class="text-primary-200 text-lg lg:text-[25px] font-dm">Shewalul Zenebe Hunde</span>
+            <span class="text-text-gray-200 text-base lg:text-lg font-jost">Founder</span>
+					</p>
+          <div class="flex gap-6">
+             <a href="/">
+              <Facebook />
+            </a>
+            <a href="/">
+              <Twitter />
+            </a>
+            <a href="/">
+              <LinkedIn />
+            </a>
+            <a href="/">
+              <Instagram />
+            </a>
+          </div>
+          <div class="flex flex-col tracking-tight leading-9 text-center">
+            <a href="tel:++447366193973" class="text-text-gray-200 text-base lg:text-lg font-jost hover:text-primary-200 transition-all duration-300 ease-in-out transform hover:scale-105">+44 7366 193973</a>
+            <a href="mailto:ash@fmprocleaning.com" class="text-text-gray-200 text-base lg:text-lg font-jost hover:text-primary-200 transition-all duration-300 ease-in-out transform hover:scale-105">ash@fmprocleaning.com</a>
+					</div>
+        </div>
+        
+        <div class="flex flex-col gap-10 w-full max-w-[350px] justify-between py-[70px] px-7 bg-white items-center rounded-[32px]">
+          <p class="flex flex-col tracking-tight leading-9 text-center">
+            <span class="text-primary-200 text-lg lg:text-[25px] font-dm">Sara Belay</span>
+            <span class="text-text-gray-200 text-base lg:text-lg font-jost">Operations Director</span>
+					</p>
+          <div class="flex gap-6">
+             <a href="/">
+              <Facebook />
+            </a>
+            <a href="/">
+              <Twitter />
+            </a>
+            <a href="/">
+              <LinkedIn />
+            </a>
+            <a href="/">
+              <Instagram />
+            </a>
+          </div>
+          <div class="flex flex-col tracking-tight leading-9 text-center">
+            <a href="tel:+447918136346" class="text-text-gray-200 text-base lg:text-lg font-jost hover:text-primary-200 transition-all duration-300 ease-in-out transform hover:scale-105">+44 7918 136346</a>
+            <a href="mailto:sara@fmprocleaning.com" class="text-text-gray-200 text-base lg:text-lg font-jost hover:text-primary-200 transition-all duration-300 ease-in-out transform hover:scale-105">sara@fmprocleaning.com</a>
+					</div>
+        </div>
+      </div>
+	  </div>
+  </section>
+  
+  <!-- Call to Action Section -->
+  <section class="w-full lg:max-w-[1200px] mx-auto px-12 xl:px-0 pt-[100px] lg:pt-[100px] pb-[50px]">
+    <div class="w-full bg-primary-200 text-white rounded-[30px] py-16 px-8 lg:px-16 text-center">
+      <h2 class="text-[30px] font-dm tracking-wide capitalize leading-8 md:leading-[50px] md:text-[40px] text-white pb-6">Ready to experience the FCM difference?</h2>
+      <p class="text-base md:text-[22px] tracking-tight font-jost text-white leading-[33px] lg:max-w-[70%] mx-auto pb-10">Contact us today to learn how our professional cleaning services can benefit your business.</p>
+      <a href="/contact" class="inline-block rounded-[18px] bg-primary-100 text-white text-base lg:text-lg font-semibold font-['Jost'] leading-snug tracking-tight px-10 py-5 md:px-[54px] md:py-[26px]">Contact Us Today</a>
+    </div>
+  </section>
+
+</MainLayout>
+
+<style>
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+      display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+  }
+
+</style>

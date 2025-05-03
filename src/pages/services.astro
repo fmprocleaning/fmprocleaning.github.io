@@ -1,0 +1,249 @@
+---
+import MainLayout from '../layouts/main-layout.astro'
+import One from "../icons/one.tsx"
+import Two from "../icons/two.tsx"
+import Three from "../icons/three.tsx"
+import Four from "../icons/four.tsx"
+import ServiceIconOne from "../icons/service1-icon.tsx"
+import ServiceIconTwo from "../icons/service2-icon.tsx"
+import ServiceIconThree from "../icons/service3-icon.tsx"
+import ServiceIconFour from "../icons/service4-icon.tsx"
+
+const baseUrl = import.meta.env.BASE_URL || '/'
+
+const commercialCleaningServices = [
+	{
+		title: 'Daily Office Cleaning',
+		text: 'Comprehensive cleaning services for workspaces, ensuring a pristine environment for employees and clients.'
+	},
+	{
+		title: 'Restroom Sanitation',
+		text: 'Thorough cleaning and sanitizing of restroom facilities using professional-grade disinfectants.'
+	},
+	{
+		title: 'Furniture Cleaning',
+		text: 'Expert cleaning of office furniture, removing dust, stains, and allergens to maintain appearance and longevity.'
+	},
+	{
+		title: 'Pressure Washing',
+		text: 'High-powered cleaning of exterior surfaces, walkways, and facades to remove dirt, grime, and stains.'
+	},
+	{
+		title: 'Post-Construction Cleaning',
+		text: 'Specialized cleaning services after construction or renovation projects to remove debris and prepare spaces for use.'
+	},
+]
+
+const hospitalityCleaningServices = [
+	{
+		title: 'Post-Checkout Cleaning',
+		text: 'Thorough cleaning of rental properties between guest stays, ensuring a pristine environment for new arrivals.'
+	},
+	{
+		title: 'Comprehensive Dusting',
+		text: 'Detailed dusting of all surfaces, fixtures, and hard-to-reach areas to maintain a clean appearance.'
+	},
+	{
+		title: 'Bathroom & Kitchen Sanitization',
+		text: 'Deep cleaning and disinfection of bathroom and kitchen areas, focusing on high-touch surfaces and fixtures.'
+	},
+	{
+		title: 'Floor Care Services',
+		text: 'Professional sweeping, mopping, and vacuuming of all floor surfaces using appropriate techniques for each floor type.'
+	},
+	{
+		title: 'Linen Services',
+		text: 'Professional laundering, ironing, and preparation of bed linens, towels, and other fabric items.'
+	},
+	{
+		title: 'Property Maintenance',
+		text: 'Comprehensive property upkeep including housekeeping, gardening, and regular maintenance tasks.'
+	},
+]
+
+const tenancyServices = [
+	{
+		title: 'Deep Cleaning',
+		text: 'Intensive cleaning of the entire property, addressing areas that may have been neglected during regular cleaning.'
+	},
+	{
+		title: 'Carpet Cleaning',
+		text: 'Professional hot water extraction cleaning for carpets, removing deeply embedded dirt, stains, and allergens.'
+	},
+	{
+		title: 'Wall & Ceiling Cleaning',
+		text: 'Removal of marks, scuffs, and general dirt from walls and ceilings to restore appearance.'
+	},
+	{
+		title: 'Appliance Cleaning',
+		text: 'Detailed cleaning of all appliances inside and out, including ovens, refrigerators, and microwaves.'
+	},
+	{
+		title: 'Window Treatment',
+		text: 'Professional cleaning of windows, frames, sills, and treatments to improve appearance and natural light.'
+	},
+]
+
+const howWeWorkDetails = [
+  {
+    imgIcon: ServiceIconOne,
+    numIcon: One,
+    title: 'Assessment & Planning',
+    info:'We begin by conducting a thorough assessment of your cleaning needs and developing a customized cleaning plan tailored to your specific requirements.'
+
+  },
+  {
+    imgIcon: ServiceIconTwo,
+    numIcon: Two,
+    title: 'Team Deployment',
+    info:'Our professional, trained cleaning teams are deployed with all necessary equipment and environmentally-friendly cleaning products to deliver exceptional service.'
+
+  },
+  {
+    imgIcon: ServiceIconThree,
+    numIcon: Three,
+    title: 'Quality Assurance',
+    info:'We implement comprehensive quality control checks throughout the cleaning process to ensure all areas meet our high standards of cleanliness.'
+
+  },
+  {
+    imgIcon: ServiceIconFour,
+    numIcon: Four,
+    title: 'Client Satisfaction',
+    info:'We follow up after service completion to ensure your complete satisfaction and make any necessary adjustments to our cleaning approach as needed.'
+
+  },
+]
+---
+
+
+<MainLayout title = 'FCM Cleaning & Maintenance Services'>
+
+  <!-- Banner Section -->
+
+  <section class="w-full bg-services h-[50vh] flex justify-center items-end">
+    <div class="py-[30px] lg:py-[41px] px-[60px] lg:px-[152px] flex flex-col justify-center items-center bg-white rounded-tl-[37px] rounded-tr-[37px] gap-2.5">
+      <h1 class="text-[30px] leading-[40px] lg:text-[50px] lg:leading-[62px] font-dm capitalize text-primary-200 ">Our Services</h1>
+      <p class="text-base lg:text-[22px] lg:leading-[33px] tracking-tight font-jost text-text-gray"> <a href="/">Home</a> / Services </p>
+    </div>
+  </section>
+
+  <!-- Commercial Cleaning Services Section -->
+  <section class="w-full lg:max-w-[1200px] mx-auto px-12 xl:px-0 pt-[100px] lg:pt-[150px]">
+    <h2 class="text-[30px] text-center font-dm tracking-wide capitalize leading-8 md:leading-[62.50px] md:text-[50px] text-text-blue pb-10">Commercial Cleaning</h2>
+    <p class="text-base md:text-[22px] text-center tracking-tight font-jost text-text-gray leading-[33px] lg:max-w-[70%] mx-auto pb-12">Professional cleaning services for office spaces and commercial environments, ensuring a pristine workplace for your team and clients.</p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 lg:gap-y-12 xl:px-0 w-full mx-auto justify-between">
+		{
+			commercialCleaningServices.map((service) => {
+				return (
+					<div class="w-full col-span-1 max-w-[358px] mx-auto flex rounded-[30px] hover:bg-primary-300 px-5 py-[83px] flex-col justify-center items-center gap-3 md:gap-5">
+						<h3 class="text-text-blue font-dm text-[22px] md:text-[25px] leading-loose">{service.title}</h3>
+						<p class="text-base md:text-[22px] tracking-tight font-jost text-text-gray leading-[33px] text-center"> {service.text}</p>
+					</div>
+				)
+			})
+		}
+	</div>
+  </section>
+  
+  <!-- Hotel & AirBnB Cleaning Services Section -->
+  <section class="w-full lg:max-w-[1200px] mx-auto px-12 xl:px-0 pt-[100px] lg:pt-[150px]">
+    <h2 class="text-[30px] text-center font-dm tracking-wide capitalize leading-8 md:leading-[62.50px] md:text-[50px] text-text-blue pb-10">Hotel & AirBnB Cleaning</h2>
+    <p class="text-base md:text-[22px] text-center tracking-tight font-jost text-text-gray leading-[33px] lg:max-w-[70%] mx-auto pb-12">Comprehensive cleaning and maintenance services for hospitality properties, ensuring exceptional guest experiences and maintaining high standards.</p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 lg:gap-y-12 xl:px-0 w-full mx-auto justify-between">
+		{
+			hospitalityCleaningServices.map((service) => {
+				return (
+					<div class="w-full col-span-1 max-w-[358px] mx-auto flex rounded-[30px] hover:bg-primary-300 px-5 py-[83px] flex-col justify-center items-center gap-3 md:gap-5">
+						<h3 class="text-text-blue font-dm text-[22px] md:text-[25px] leading-loose">{service.title}</h3>
+						<p class="text-base md:text-[22px] tracking-tight font-jost text-text-gray leading-[33px] text-center"> {service.text}</p>
+					</div>
+				)
+			})
+		}
+	</div>
+  </section>
+  
+  <!-- End of Tenancy Services Section -->
+  <section class="w-full lg:max-w-[1200px] mx-auto px-12 xl:px-0 pt-[100px] lg:pt-[150px]">
+    <h2 class="text-[30px] text-center font-dm tracking-wide capitalize leading-8 md:leading-[62.50px] md:text-[50px] text-text-blue pb-10">End of Tenancy</h2>
+    <p class="text-base md:text-[22px] text-center tracking-tight font-jost text-text-gray leading-[33px] lg:max-w-[70%] mx-auto pb-12">Thorough cleaning services when transitioning between tenants, ensuring properties are spotless and ready for new occupants.</p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 lg:gap-y-12 xl:px-0 w-full mx-auto justify-between">
+		{
+			tenancyServices.map((service) => {
+				return (
+					<div class="w-full col-span-1 max-w-[358px] mx-auto flex rounded-[30px] hover:bg-primary-300 px-5 py-[83px] flex-col justify-center items-center gap-3 md:gap-5">
+						<h3 class="text-text-blue font-dm text-[22px] md:text-[25px] leading-loose">{service.title}</h3>
+						<p class="text-base md:text-[22px] tracking-tight font-jost text-text-gray leading-[33px] text-center"> {service.text}</p>
+					</div>
+				)
+			})
+		}
+	</div>
+  </section>
+
+  <!-- Our Process Section -->
+  <section class="px-12 xl:px-0 w-full mt-[100px] lg:mt-[200px] min-h-screen ">
+   <div class="w-full lg:max-w-[1200px] p-12 mx-auto lg:px-[116px] lg:py-[160px] bg-primary-300 rounded-[70px] ">
+     <h2 class="font-dm tracking-wide text-center leading-[37px] lg:leading-[62.50px] text-[30px] lg:text-[50px] w-full capitalize lg:max-w-[70%] pb-2 mx-auto">Our Cleaning Process</h2>
+		<p class="text-base md:text-[22px] text-center tracking-tight font-jost text-text-gray leading-[33px] lg:max-w-[70%] mx-auto">At FCM, we follow a proven methodology to ensure consistent, high-quality cleaning services for all our clients. Our systematic approach guarantees exceptional results every time.</p>
+
+    <div class="pt-[70px] lg:pt-[100px] flex flex-col gap-[70px] ">
+      <!-- Inner Sections -->
+
+      {
+        howWeWorkDetails.map((detail, index) => {
+          const ImageIcon = detail.imgIcon
+          const NumberIcon = detail.numIcon
+          const className = `flex justify-between flex-col gap-[30px] items-center max-w-[967px] mx-auto`
+
+          return(
+            <div class={className}>
+              <div class="flex flex-col gap-12 lg:gap-[58px]">
+                <div class="justify-between flex">
+                  <ImageIcon />
+                  <NumberIcon/>
+                </div>
+                <div class="flex flex-col gap-3">
+                  <h3 class="text-text-blue font-dm text-[22px] md:text-[25px] leading-loose">{detail.title}</h3>
+                  <p class="text-base md:text-[22px] tracking-tight font-jost text-text-gray leading-[33px]">{detail.info}</p>
+                </div>
+              </div>
+            </div>
+          )
+        })
+      }
+
+      <!-- Inner Sections End -->
+    </div>
+   </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="w-full lg:max-w-[1200px] mx-auto px-12 xl:px-0 pt-[100px] lg:pt-[100px] pb-[50px]">
+    <div class="w-full bg-primary-200 text-white rounded-[30px] py-16 px-8 lg:px-16 text-center">
+      <h2 class="text-[30px] font-dm tracking-wide capitalize leading-8 md:leading-[50px] md:text-[40px] text-white pb-6">Ready to experience professional cleaning services?</h2>
+      <p class="text-base md:text-[22px] tracking-tight font-jost text-white leading-[33px] lg:max-w-[70%] mx-auto pb-10">Contact us today for a free assessment and quote tailored to your specific cleaning needs.</p>
+      <a href="/contact" class="inline-block rounded-[18px] bg-primary-100 text-white text-base lg:text-lg font-semibold font-['Jost'] leading-snug tracking-tight px-10 py-5 md:px-[54px] md:py-[26px]">Request a Quote</a>
+    </div>
+  </section>
+
+</MainLayout>
+
+<style>
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+      display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+  }
+
+</style>
